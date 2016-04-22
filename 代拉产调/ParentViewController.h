@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ParentViewController.h
 //  代拉产调
 //
 //  Created by 陈思远 on 16/3/22.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ParentViewController : UIViewController
 
 @end
-

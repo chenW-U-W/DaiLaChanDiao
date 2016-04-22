@@ -1,0 +1,44 @@
+//
+//  PCH.pch
+//  代拉产调
+//
+//  Created by 陈思远 on 16/3/22.
+//  Copyright © 2016年 陈思远. All rights reserved.
+//
+
+#ifndef PCH_pch
+#define PCH_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define NAVHEIGHT 44
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define navigationBarColor UIColorFromRGB(0x85C048)
+
+
+
+#ifdef DEBUG
+#   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#   define DLog(...)
+#endif
+
+
+
+
+//#define CailaiAPIBaseURLString @"http://api.cailai.com/v1.0/"
+//static NSString * const SecretKey = @"09ff08cb5e4afb2fa04776d524903791";//正式
+static NSString * const SecretKey = @"bc7cfba8367fdc117d2ac8e85a5effe3";//测试
+#define CailaiAPIBaseURLString @"http://apitest.cailai.com/v1.0/"
+
+
+#define mainColor  UIColorFromRGB(0x85C048)
+
+#define ALERTVIEW {UIAlertView *alert =[[UIAlertView alloc] initWithTitle:nil message:@"无法连接服务请稍后再试" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];[alert show];}
+
+
+#endif /* PCH_pch */
